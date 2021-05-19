@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="border-collapse: collapse;" border="1">
+    <tbody>
+    <tr>
+        <th>Personal Numberr</th>
+        <th>First Name</th>
+        <th>Last Info</th>
+        <th>Position</th>
+    </tr>
+    <tr th:each="staffVar:${staff}">
+        <td th:text="${staffVar.personalNumber}"></td>
+        <td th:text="${staffVar.firstName}"></td>
+        <td th:text="${staffVar.latsName}"></td>
+        <td th:text="${staffVar.getPosition().toString()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
